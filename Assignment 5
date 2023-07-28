@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Shopping</title>
+    <!---cdn link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet/main.css">
+</head>
+<body>
+    <header class="m-2">
+        <div class="logo">
+            <img src="data:image/png;base64,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" alt="">
+        </div>
+    </header>
+<div class="container">
+   <h1 class="alert alert-primary text-center">Pizza Hut</h1>
+   <div class="row">
+        <div class="col-8">
+            <div class="row">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.squarespace-cdn.com/content/v1/58bdca902e69cf9dc75b5864/1572987295320-38VBYQWKJVV6X5DXGCWV/Websize0004.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Shakahari pizza</h5>
+                    <p class="card-text">for vegetarians</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.squarespace-cdn.com/content/v1/58bdca902e69cf9dc75b5864/1572987295320-38VBYQWKJVV6X5DXGCWV/Websize0004.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Masahari Pizza</h5>
+                    <p class="card-text">for non vegetarians.</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.squarespace-cdn.com/content/v1/58bdca902e69cf9dc75b5864/1572987295320-38VBYQWKJVV6X5DXGCWV/Websize0004.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">vegan pizza</h5>
+                    <p class="card-text">for Vegan people</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.squarespace-cdn.com/content/v1/58bdca902e69cf9dc75b5864/1572987295320-38VBYQWKJVV6X5DXGCWV/Websize0004.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">pizza ka papa</h5>
+                    <p class="card-text">for papa only.</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.squarespace-cdn.com/content/v1/58bdca902e69cf9dc75b5864/1572987295320-38VBYQWKJVV6X5DXGCWV/Websize0004.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Toofani pizza</h5>
+                    <p class="card-text">Mountain dew free.</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.squarespace-cdn.com/content/v1/58bdca902e69cf9dc75b5864/1572987295320-38VBYQWKJVV6X5DXGCWV/Websize0004.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Ek no. pizza</h5>
+                    <p class="card-text">for toppers only.</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.squarespace-cdn.com/content/v1/58bdca902e69cf9dc75b5864/1572987295320-38VBYQWKJVV6X5DXGCWV/Websize0004.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Master pizza</h5>
+                    <p class="card-text">for teachers</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 border border-1">
+            <h2>Total Bill</h2>
+            <div class="card">
+                pizza 1 
+                pizza 2 
+                pizza 3 
+            </div>
+
+            <div class="card">
+                Total Pizza :<span>3</span>
+                pizza Amount:<span>1200</span>
+            </div>
+            <button class="btn btn-success w=100 mt-auto">Pay Bill</button>
+            
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
